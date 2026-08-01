@@ -1,101 +1,25 @@
-<input type="password" id="passwordInput" placeholder="Enter password">
-<button onclick="unlock()">Unlock My Heart</button>
+const PASSWORD = "jamsen28";
 
-const style = document.createElement("style");
-style.innerHTML = `
-body{
-    margin:0;
-    font-family:Georgia,serif;
-    background:linear-gradient(135deg,#ff9dbb,#ffd6e8,#fff4f8);
-    overflow:hidden;
-}
+document.getElementById("unlockBtn").onclick = () => {
 
-#lockScreen{
-    position:fixed;
-    inset:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+    const password = document.getElementById("passwordInput").value;
 
-.lock-card{
-    width:360px;
-    max-width:90%;
-    background:rgba(255,255,255,.88);
-    backdrop-filter:blur(10px);
-    border-radius:25px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
-    animation:fadeIn .8s;
-}
+    if(password === PASSWORD){
 
-.heart{
-    font-size:70px;
-    animation:beat 1.2s infinite;
-}
+        document.getElementById("lockScreen").style.display = "none";
 
-h1{
-    color:#d63384;
-    margin-top:10px;
-}
+        intro.style.display = "block";
+        
+        letterBox.style.display = "none";
 
-p{
-    color:#555;
-}
+    }else{
 
-input{
-    width:100%;
-    padding:14px;
-    margin-top:25px;
-    border:none;
-    border-radius:12px;
-    background:#ffe8ef;
-    font-size:16px;
-    outline:none;
-}
+        document.getElementById("errorMessage").innerHTML =
+        "💔 That's not our secret.";
 
-button{
-    width:100%;
-    margin-top:18px;
-    padding:15px;
-    border:none;
-    border-radius:50px;
-    background:#ff4d88;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px #ff7aa8;
-}
-
-#errorMessage{
-    color:#d80032;
-    margin-top:15px;
-    min-height:22px;
-}
-
-@keyframes beat{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.15);}
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(25px);
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-`;
 
+};
 document.head.appendChild(style);
 
 document.getElementById("unlockBtn").onclick = () => {
