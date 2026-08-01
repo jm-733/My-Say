@@ -9,7 +9,7 @@ document.getElementById("unlockBtn").onclick = () => {
         document.getElementById("lockScreen").style.display = "none";
 
         intro.style.display = "block";
-        
+
         letterBox.style.display = "none";
 
     }else{
