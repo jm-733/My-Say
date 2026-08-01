@@ -1,26 +1,5 @@
-const PASSWORD = "jamsen28"; // Change this to your own password
-
-document.body.innerHTML = `
-<div id="lockScreen">
-    <div class="lock-card">
-        <div class="heart">❤️</div>
-        <h1>For Say</h1>
-        <p>This letter is waiting just for you.</p>
-
-        <input
-            type="password"
-            id="passwordInput"
-            placeholder="Enter our secret..."
-        >
-
-        <button id="unlockBtn">
-            Unlock My Heart ❤️
-        </button>
-
-        <p id="errorMessage"></p>
-    </div>
-</div>
-`;
+<input type="password" id="passwordInput" placeholder="Enter password">
+<button onclick="unlock()">Unlock My Heart</button>
 
 const style = document.createElement("style");
 style.innerHTML = `
