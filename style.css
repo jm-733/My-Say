@@ -237,26 +237,25 @@ body{
 
     width:90%;
 
-    max-width:750px;
+    max-width:950px;
 
     max-height:90vh;
 
     overflow:auto;
 
-    background:rgba(255,255,255,.85);
+    background:rgba(255,255,255,.9);
 
     backdrop-filter:blur(15px);
 
-    border-radius:20px;
+    border-radius:35px;
 
-    padding:35px;
+    padding:60px;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
 
     text-align:center;
 
 }
-
 
 
 .photo{
