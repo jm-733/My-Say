@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia, serif;
+    background:linear-gradient(135deg,#ff8fb1,#ffd6e8,#fff5f8);
+    overflow:hidden;
+    height:100vh;
+}
+
+/* Intro Screen */
+
+#intro{
+    position:fixed;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    text-shadow:2px 2px 12px rgba(0,0,0,.25);
+    cursor:pointer;
+}
+
+#intro h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+#intro p{
+    font-size:1.4rem;
+}
+
+/* Letter */
+
+#letterBox{
+
+    display:none;
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:750px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+#photo{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    display:block;
+
+    margin:0 auto 25px;
+
+    box-shadow:0 0 25px pink;
+
+}
+
+#letter{
+
+    white-space:pre-wrap;
+
+    color:#444;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+/* Cursor */
+
+.cursor{
+
+border-right:2px solid hotpink;
+
+animation:blink .7s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+border-color:transparent;
+
+}
+
+/* Hearts */
+
+.love{
+
+position:absolute;
+
+font-weight:bold;
+
+pointer-events:none;
+
+animation:floatUp 2.5s forwards;
+
+white-space:nowrap;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+opacity:1;
+
+transform:translateY(0) scale(.8);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-220px) scale(1.5);
+
+}
+
+}
+
+/* Petals */
+
+.petal{
+
+position:absolute;
+
+animation:fall linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-10vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(360deg);
+
+}
+
+}
+
+/* Fireworks */
+
+.firework{
+
+position:absolute;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:explode 1.3s forwards;
+
+}
+
+@keyframes explode{
+
+0%{
+
+opacity:1;
+
+transform:scale(.5);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-150px) scale(3);
+
+}
+
+}
