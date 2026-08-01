@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Say ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Unlock My Heart ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- PASSWORD LOCK SCREEN -->
-<div id="lockScreen">
+<div class="lock-container">
 
     <div class="lock-card">
 
@@ -22,48 +23,19 @@
         <p>This is something made only for you...</p>
 
         <input 
-            type="password" 
-            id="passwordInput" 
-            placeholder="Enter password"
-        >
+        type="password" 
+        id="passwordInput" 
+        placeholder="Enter password">
 
-        <button id="unlockBtn">
-            Unlock My Heart
+        <button onclick="unlock()">
+            Unlock
         </button>
 
-        <p id="errorMessage"></p>
+        <p id="error"></p>
 
     </div>
 
 </div>
-
-
-<!-- INTRO AFTER UNLOCK -->
-<div id="intro" style="display:none;">
-
-    <h1>❤️ Click Anywhere ❤️</h1>
-
-    <p>I made something just for you...</p>
-
-</div>
-
-
-<!-- LOVE LETTER -->
-<div id="letterBox" style="display:none;">
-
-    <img id="photo" src="image1.jpg" alt="My Love">
-
-    <div id="letter"></div>
-
-</div>
-
-
-<!-- MUSIC -->
-<audio id="music" loop>
-
-    <source src="music.mp3" type="audio/mpeg">
-
-</audio>
 
 
 <script src="script.js"></script>
