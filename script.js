@@ -1,4 +1,4 @@
-const PASSWORD = "ourforever"; // Change this to your own password
+const PASSWORD = "jamsen28"; // Change this to your own password
 
 document.body.innerHTML = `
 <div id="lockScreen">
