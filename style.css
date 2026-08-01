@@ -4,38 +4,224 @@
     box-sizing:border-box;
 }
 
+
 body{
+
     font-family:Georgia, serif;
+
     background:linear-gradient(135deg,#ff8fb1,#ffd6e8,#fff5f8);
+
     overflow:hidden;
+
     height:100vh;
+
 }
 
-/* Intro Screen */
+
+/* ==========================
+   PASSWORD LOCK SCREEN
+========================== */
+
+
+.lock-container{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+
+
+.lock-card{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:rgba(255,255,255,0.9);
+
+    backdrop-filter:blur(15px);
+
+    padding:50px 40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    animation:fadeIn .8s ease;
+
+}
+
+
+
+.lock-card .heart{
+
+    font-size:90px;
+
+    animation:beat 1.2s infinite;
+
+}
+
+
+
+.lock-card h1{
+
+    color:#d63384;
+
+    font-size:32px;
+
+    margin-top:15px;
+
+}
+
+
+
+.lock-card p{
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-top:10px;
+
+}
+
+
+
+.lock-card input{
+
+    width:100%;
+
+    padding:18px;
+
+    margin-top:25px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#ffe8ef;
+
+    font-size:18px;
+
+    outline:none;
+
+}
+
+
+
+.lock-card button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4d88;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.lock-card button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px #ff7aa8;
+
+}
+
+
+
+#error{
+
+    color:#d80032;
+
+    margin-top:15px;
+
+}
+
+
+
+
+/* ==========================
+   INTRO SCREEN
+========================== */
+
 
 #intro{
+
     position:fixed;
+
     inset:0;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
+
     color:white;
+
     text-align:center;
+
     text-shadow:2px 2px 12px rgba(0,0,0,.25);
+
     cursor:pointer;
+
 }
+
+
 
 #intro h1{
+
     font-size:3rem;
+
     margin-bottom:20px;
+
 }
+
+
 
 #intro p{
+
     font-size:1.4rem;
+
 }
 
-/* Letter */
+
+
+
+/* ==========================
+   LETTER SECTION
+========================== */
+
 
 #letterBox{
 
@@ -53,6 +239,10 @@ body{
 
     max-width:750px;
 
+    max-height:90vh;
+
+    overflow:auto;
+
     background:rgba(255,255,255,.85);
 
     backdrop-filter:blur(15px);
@@ -63,22 +253,31 @@ body{
 
     box-shadow:0 15px 35px rgba(0,0,0,.2);
 
-}
-
-.photo {
-
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    text-align:center;
 
 }
+
+
+
+.photo{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin:0 auto 25px;
+
+    display:block;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+
 
 #letter{
 
@@ -90,120 +289,202 @@ body{
 
     font-size:20px;
 
+    text-align:left;
+
 }
 
-/* Cursor */
+
+
+
+/* Cursor typing effect */
 
 .cursor{
 
-border-right:2px solid hotpink;
+    border-right:2px solid hotpink;
 
-animation:blink .7s infinite;
+    animation:blink .7s infinite;
 
 }
+
+
 
 @keyframes blink{
 
-50%{
+    50%{
 
-border-color:transparent;
+        border-color:transparent;
+
+    }
 
 }
 
-/* Hearts */
+
+
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+
+@keyframes beat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* ==========================
+   FLOATING I LOVE YOU EFFECT
+========================== */
+
 
 .love{
 
-position:absolute;
+    position:absolute;
 
-font-weight:bold;
+    font-weight:bold;
 
-pointer-events:none;
+    pointer-events:none;
 
-animation:floatUp 2.5s forwards;
+    animation:floatUp 2.5s forwards;
 
-white-space:nowrap;
+    white-space:nowrap;
 
 }
+
+
 
 @keyframes floatUp{
 
-0%{
+    0%{
 
-opacity:1;
+        opacity:1;
 
-transform:translateY(0) scale(.8);
+        transform:translateY(0) scale(.8);
+
+    }
+
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-220px) scale(1.5);
+
+    }
 
 }
 
-100%{
 
-opacity:0;
 
-transform:translateY(-220px) scale(1.5);
 
-}
+/* ==========================
+   FALLING PETALS
+========================== */
 
-}
-
-/* Petals */
 
 .petal{
 
-position:absolute;
+    position:absolute;
 
-animation:fall linear infinite;
+    animation:fall linear infinite;
 
-opacity:.8;
+    opacity:.8;
 
 }
+
+
 
 @keyframes fall{
 
-0%{
+    0%{
 
-transform:translateY(-10vh) rotate(0deg);
+        transform:translateY(-10vh) rotate(0deg);
+
+    }
+
+
+    100%{
+
+        transform:translateY(110vh) rotate(360deg);
+
+    }
 
 }
 
-100%{
 
-transform:translateY(110vh) rotate(360deg);
 
-}
 
-}
+/* ==========================
+   FIREWORKS
+========================== */
 
-/* Fireworks */
 
 .firework{
 
-position:absolute;
+    position:absolute;
 
-font-size:28px;
+    font-size:28px;
 
-pointer-events:none;
+    pointer-events:none;
 
-animation:explode 1.3s forwards;
+    animation:explode 1.3s forwards;
 
 }
+
+
 
 @keyframes explode{
 
-0%{
+    0%{
 
-opacity:1;
+        opacity:1;
 
-transform:scale(.5);
+        transform:scale(.5);
 
-}
+    }
 
-100%{
 
-opacity:0;
+    100%{
 
-transform:translateY(-150px) scale(3);
+        opacity:0;
 
-}
+        transform:translateY(-150px) scale(3);
+
+    }
 
 }
